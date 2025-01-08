@@ -22,7 +22,7 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:5000/verify-signin-otp`, {
+      const response = await axios.post(`https://hd-backend-8sgw.onrender.com/verify-signin-otp`, {
         email: formData.email,
         otp: formData.otp
       });
@@ -44,7 +44,7 @@ const Signin = () => {
 
   const handleSendOTP = async () => {
     try {
-      const response = await axios.post(`http://localhost:5000/signin`, { email: formData.email });
+      const response = await axios.post(`https://hd-backend-8sgw.onrender.com/signin`, { email: formData.email });
       if (response.status === 200) {
         alert('OTP sent successfully!');
         setOtpSent(true); // Set OTP sent state to true

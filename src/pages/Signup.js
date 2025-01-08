@@ -25,7 +25,7 @@ const SignupForm = () => {
 
   const sendOtp = async () => {
     try {
-      await axios.post(`http://localhost:5000/signup`, { name: formData.name, email: formData.email });
+      await axios.post(`https://hd-backend-8sgw.onrender.com/signup`, { name: formData.name, email: formData.email });
       setOtpSent(true);
       setShowOTP(true);
       alert('OTP sent successfully!');
@@ -38,7 +38,7 @@ const SignupForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/verify-signup-otp', {
+      const response = await axios.post('https://hd-backend-8sgw.onrender.com/verify-signup-otp', {
         email: formData.email,
         otp: formData.otp
       });

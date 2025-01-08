@@ -20,7 +20,7 @@ const Dashboard = () => {
       return;
     }
     try {
-      const response = await fetch('http://localhost:5000/get-user-data', {
+      const response = await fetch('https://hd-backend-8sgw.onrender.com/get-user-data', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`, // Send token in the header
@@ -52,7 +52,7 @@ const Dashboard = () => {
     const token = localStorage.getItem('token'); // Moved inside the function to ensure it always fetches the latest token
     if (!newNote.trim()) return alert('Note content cannot be empty!');
     try {
-      const response = await fetch('http://localhost:5000/add-note', {
+      const response = await fetch('https://hd-backend-8sgw.onrender.com/add-note', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -74,7 +74,7 @@ const Dashboard = () => {
 
   const deleteNote = async (noteId) => {
     try {
-      const response = await fetch(`http://localhost:5000/delete-note/${noteId}`, {
+      const response = await fetch(`https://hd-backend-8sgw.onrender.com/delete-note/${noteId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
