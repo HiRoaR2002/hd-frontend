@@ -196,7 +196,7 @@ const Signin = () => {
           marginTop: "50px"
         }}
       >
-        <div>Need an account? <a href='/signup' style={{ textDecoration: "underline", color: "#367AFF" }}>Create One</a></div>
+        <div>Need an account? <a href='/' style={{ textDecoration: "underline", color: "#367AFF" }}>Create One</a></div>
       </div>
     </div>
   );
